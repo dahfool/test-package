@@ -1,22 +1,39 @@
 {
   "name": "test-video-package",
   "version": "0.1.0",
-  "private": true,
+  "description": "Test npm video package",
+  "private": false,
   "devDependencies": {
+    "@babel/cli": "^7.1.5",
     "react-scripts": "2.1.1"
   },
   "dependencies": {
     "react": "^16.6.3",
+    "react-countdown-now": "^1.3.0",
     "react-dom": "^16.6.3"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build-local": "react-scripts build",
+    "build": "babel src --out-dir dist --ignore spec.js,test.js,spec.jsx,test.jsx --presets=@babel/env,@babel/react",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dahfool/test-package"
+  },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "browserslist": [
     ">0.2%",
