@@ -1,6 +1,6 @@
 {
   "name": "test-video-package",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Test npm video package",
   "private": false,
   "devDependencies": {
